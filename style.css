@@ -1,64 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Kumbh Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 main {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
 .container {
-    width: 920px;
-    height: 510px;
-    background-color: #fff;
-    border-radius: 23px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 920px;
+  height: 510px;
+  background-color: #fff;
+  border-radius: 23px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.side{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
+.side {
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 }
 
-.img-woman{
-    width: 90%;
-    padding-left: 0px;
+.img-woman {
+  position: relative;
+  left: -17%;
+  width: 460px;
+  padding-left: 0px;
 }
 
-h1{
-    font-size: 1.8rem;
-    text-align: start;
-    width: 100%;
-    color: hsl(238, 29%, 16%);
+.img-bg {
+  position: absolute;
+  bottom: 6%;
+  left: -10%;
+  width: 460px;
 }
 
-h2{
+.img-box {
+  position: absolute;
+  left: -13%;
+  bottom: 20%;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: start;
+  width: 100%;
+  color: hsl(238, 29%, 16%);
+}
+
+h2 {
   font-size: 1rem;
   cursor: pointer;
   font-weight: 400;
   color: hsl(237, 12%, 33%);
 }
-h2:hover{
+
+h2:hover {
   color: hsl(14, 88%, 65%);
 }
 
-p{
+p {
   padding-bottom: 10px;
   color: hsl(240, 6%, 50%);
   font-size: 0.8rem;
@@ -67,31 +85,31 @@ p{
 
 
 .accordion {
-    display: flex;
-    flex-direction: column;
-    justify-content:start ;
-    width: 356px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 356px;
+}
 
-  .accordion-item {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 5px;
-  }
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
 
-  .accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0px;
-  }
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
 
-.accordion img{
-    width: 10px;
-    height: 6px;
+.accordion img {
+  width: 10px;
+  height: 6px;
 
 }
 
-.accordion-content{
+.accordion-content {
   margin-bottom: 5px;
   transition: 1s;
   display: none;
