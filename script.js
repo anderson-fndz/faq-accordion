@@ -1,13 +1,22 @@
-function clickAccordion(t) {
-    var title = document.querySelectorAll('h2')
-    var parent = document.querySelectorAll('.accordion-header')[t].parentElement;
-    var img = document.querySelectorAll('.image-arrow')
-    var content = parent.lastElementChild.classList.contains('hide');
+const header = document.querySelectorAll('.accordion-header')
+const content = document.querySelectorAll('.accordion-content')
+const title = document.querySelectorAll('.title')
 
-    if (content == true) {
-        parent.lastElementChild.className = "show";
-        title.style.fontWeight = 'bold'
-    } else {
-        parent.lastElementChild.classList = "hide";
-    }
+for (let i = 0; i < header.length; i++) {
+    header[i].addEventListener('click', e => {
+        let display = content[i].style.display
+
+        if (display !== 'flex') {
+            content[i].style.display = 'flex'
+            title[i].style.fontWeight = 'bold'
+            
+        }
+
+        if (display !== 'none') {
+            content[i].style.display = 'none'
+            title[i].style.fontWeight = 'normal'
+        }
+
+
+    })
 }
