@@ -1,22 +1,26 @@
-const header = document.querySelectorAll('.accordion-header')
-const content = document.querySelectorAll('.accordion-content')
-const title = document.querySelectorAll('.title')
+const itens = document.querySelectorAll('.accordion-item')
 
-for (let i = 0; i < header.length; i++) {
-    header[i].addEventListener('click', e => {
-        let display = content[i].style.display
+itens.forEach((e, index) => {
+    const header = e.querySelector('.accordion-header')
+    const icon = e.querySelector('.image-arrow')
+    // Tá capturando certo cada header
+
+    e.addEventListener('click', () => {
+        let content = e.querySelector('.accordion-content')
+        let title = e.querySelector('.title')
+        let display = content.style.display
 
         if (display !== 'flex') {
-            content[i].style.display = 'flex'
-            title[i].style.fontWeight = 'bold'
-            
+            content.style.display = 'flex'
+            title.style.fontWeight = 'bold'
+            icon.style.transform = 'rotate(180deg)'
         }
 
         if (display !== 'none') {
-            content[i].style.display = 'none'
-            title[i].style.fontWeight = 'normal'
+            content.style.display = 'none'
+            title.style.fontWeight = 'normal'
+            icon.style.transform = 'rotate(0deg)'
+
         }
-
-
     })
-}
+})
