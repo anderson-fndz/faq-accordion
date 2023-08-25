@@ -112,6 +112,16 @@ p {
 
 .accordion-content {
   margin-bottom: 5px;
-  transition: 1s;
+}
+
+.hide{
   display: none;
+}
+
+.show{
+  display: block;
+}
+
+@media (max-width: 375px) {
+
 }

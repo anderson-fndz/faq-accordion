@@ -8,19 +8,13 @@ itens.forEach((e, index) => {
     e.addEventListener('click', () => {
         let content = e.querySelector('.accordion-content')
         let title = e.querySelector('.title')
-        let display = content.style.display
 
-        if (display !== 'flex') {
-            content.style.display = 'flex'
-            title.style.fontWeight = 'bold'
-            icon.style.transform = 'rotate(180deg)'
-        }
-
-        if (display !== 'none') {
-            content.style.display = 'none'
-            title.style.fontWeight = 'normal'
-            icon.style.transform = 'rotate(0deg)'
-
+        if(content.classList.contains('hide')){
+            content.classList.remove('hide')
+            content.classList.add('show')
+        }else{
+            content.classList.remove('show')
+            content.classList.add('hide')
         }
     })
 })
