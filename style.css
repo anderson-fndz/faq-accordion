@@ -107,11 +107,13 @@ p {
 .image-arrow {
   width: 10px;
   height: 6px;
+  transition: 0.3s;
   transform: rotate(0deg);
 }
 
 .accordion-content {
   margin-bottom: 5px;
+  display: block;
 }
 
 .hide{
@@ -119,6 +121,7 @@ p {
 }
 
 .show{
+  transition: 1s;
   display: block;
 }
 
