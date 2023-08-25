@@ -31,24 +31,6 @@ itens.forEach((e, index, array) => {
 
             count = count - 1
         }
-
-        if (count >= 2) {
-                    content.classList.remove('show')
-
-        }
-
     })
 
 })
-
-
-
-
-/*
-    for (let i = 0; i < itens.length; index++) {
-        var removeContent = document.querySelectorAll('.accordion-content')
-        removeContent.classList.remove('show')
-        
-    }
-
-*/

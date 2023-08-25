@@ -38,6 +38,10 @@ main {
   justify-content: center;
 }
 
+.mobile{
+  display: none;
+}
+
 .img-woman {
   position: relative;
   left: -17%;
@@ -126,5 +130,48 @@ p {
 }
 
 @media (max-width: 375px) {
+  main{
+    width: 100%;
+    height: 100vh;
+  }
+  .container
+  {width: 90%;
+    flex-direction: column;
 
+  }
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+  .side{
+    width: 70%;
+    height: 60%;
+  }
+  .mobile-woman{
+    position: absolute;
+    top:0px;
+    right: 10px;
+    left: 10px;
+  }
+  .mobile-bg{
+    position: relative;
+  }
+  h1{
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .title{
+    font-size: 0.8rem;
+  }
+
+  .accordion-header{
+    padding: 8px;
+  }
+
+  .accordion-content{
+    margin: 0px;
+    padding: 0px;
+  }
 }
